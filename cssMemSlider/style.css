@@ -143,7 +143,7 @@ input[type="radio"] {
     }
     .slider_container {
         width: 100vw;
-        min-height: 100vh;
+        height: 100vh;
         padding: 1em;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(6, 1fr);
@@ -169,10 +169,12 @@ input[type="radio"] {
 
     .text_slide {
         font-size: 1.8rem;
+        line-height: 2.3rem;
+        padding: 10px;
     }
 
     .slider__pagination nav {
-        column-gap: 1em;
+        column-gap: 2em;
         align-items: center;
     }
 
@@ -183,6 +185,14 @@ input[type="radio"] {
 
     .slider__pagination .slider__pagintaion_dot::after {
         height: 300%;
+    }
+
+    .slider__layout figure {
+        background: rgba(255, 255, 255, 0.733);
+    }
+
+    .slider__layout figure .slider__image {
+        object-fit: contain;
     }
 
 }
@@ -199,11 +209,12 @@ input[type="radio"] {
             "layout layout layout"
             "layout layout layout"
             "layout layout layout"
+            "layout layout layout"
             "text text pagination";
         row-gap: 20px;
         padding: 1em;
-        min-height: max-content;
-        min-height: 90vh;
+        /* min-height: max-content; */
+        height: 90vh;
     }
 
     .slider__pagination .slider__pagintaion_dot {
@@ -213,6 +224,15 @@ input[type="radio"] {
 
     .text_slide {
         font-size: 1.5rem;
+        padding: 0 1em 1em 0;
+    }
+
+    .slider__layout figure {
+        background: rgba(255, 255, 255, 0.733);
+    }
+
+    .slider__layout figure .slider__image {
+        object-fit: contain;
     }
 
 }
@@ -245,6 +265,8 @@ input[type="radio"] {
     .text_slide {
         font-size: 1.2rem;
     }
+
+
 }
 
 @media screen and (min-width: 1440px){
