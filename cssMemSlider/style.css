@@ -6,7 +6,6 @@
 
 body {
     display: flex;
-    align-items: center;
     justify-content: center;
     
     height: 100vh;
@@ -205,7 +204,6 @@ input[type="radio"] {
             "text text pagination";
         row-gap: 20px;
         padding: 1em;
-        /* min-height: max-content; */
         height: 90vh;
     }
 
@@ -238,7 +236,6 @@ input[type="radio"] {
         min-height: 20vh;
         max-height: 80vh;
         padding: 1em;
-
     }
 
     .slider__pagination .slider__pagintaion_dot {
