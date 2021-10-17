@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -71,6 +73,8 @@ input[type="radio"] {
     line-height: 1.5rem;
     font-weight: 400;
     color: #fff;
+    opacity: 0;
+    transition: all .5s ease-in-out; 
 }
 
 .slider__pagination {
@@ -94,7 +98,7 @@ input[type="radio"] {
     height: 1em;
     cursor: pointer;
     border-radius: 100%;
-    border: 2px solid #71abfe;
+    border: .125rem solid #71abfe;
     background: transparent;
     transition: all .3s ease-in-out;
 }
@@ -115,7 +119,7 @@ input[type="radio"] {
 
 .slider__pagination .slider__pagintaion_dot:active {
     background: #313d4e;
-    border: 2px solid #002558;
+    border: .125rem solid #002558;
     transition: all .01s linear;
 }
 
@@ -130,10 +134,15 @@ input[type="radio"] {
 #input-3:checked ~ .slider__text .text_slides { margin-left:-200%; }
 #input-4:checked ~ .slider__text .text_slides { margin-left:-300%; }
 
-#input-1:checked ~ .slider__pagination .slider__pagintaion_dot:nth-child(1) { opacity: 1; background: #71abfe; }
-#input-2:checked ~ .slider__pagination .slider__pagintaion_dot:nth-child(2) { opacity: 1; background: #71abfe; }
-#input-3:checked ~ .slider__pagination .slider__pagintaion_dot:nth-child(3) { opacity: 1; background: #71abfe; }
-#input-4:checked ~ .slider__pagination .slider__pagintaion_dot:nth-child(4) { opacity: 1; background: #71abfe; }
+#input-1:checked ~ .slider__text .text_slides .text_slide:nth-child(1) { opacity: 1; }
+#input-2:checked ~ .slider__text .text_slides .text_slide:nth-child(2) { opacity: 1; }
+#input-3:checked ~ .slider__text .text_slides .text_slide:nth-child(3) { opacity: 1; }
+#input-4:checked ~ .slider__text .text_slides .text_slide:nth-child(4) { opacity: 1; }
+
+#input-1:checked ~ .slider__pagination .slider__pagintaion_dot:nth-child(1) { background: #71abfe; }
+#input-2:checked ~ .slider__pagination .slider__pagintaion_dot:nth-child(2) { background: #71abfe; }
+#input-3:checked ~ .slider__pagination .slider__pagintaion_dot:nth-child(3) { background: #71abfe; }
+#input-4:checked ~ .slider__pagination .slider__pagintaion_dot:nth-child(4) { background: #71abfe; }
 
 /* ===== * MOBILE STYLES * ===== */
 @media screen and (max-width: 720px) {
@@ -153,7 +162,7 @@ input[type="radio"] {
             "layout"
             "pagination"
             "text";
-        row-gap: 0px;
+        row-gap: 0;
     }
 
     .slider__pagination {
@@ -169,7 +178,7 @@ input[type="radio"] {
     .text_slide {
         font-size: 1.8rem;
         line-height: 2.3rem;
-        padding: 10px;
+        padding: 1em;
     }
 
     .slider__pagination nav {
@@ -195,7 +204,7 @@ input[type="radio"] {
 
     .slider_container {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, 1fr) 100px;
+        grid-template-rows: repeat(4, 1fr) 5%;
         grid-template-areas: 
             "layout layout layout"
             "layout layout layout"
@@ -225,7 +234,7 @@ input[type="radio"] {
     }
     .slider_container {
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr) 150px;
+        grid-template-rows: repeat(3, 1fr) 20%;
         grid-template-areas: 
             "layout layout layout"
             "layout layout layout"
